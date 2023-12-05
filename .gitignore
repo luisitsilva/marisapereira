@@ -397,6 +397,7 @@ FodyWeavers.xsd
 *.mp3
 *.mpeg
 *.jpeg
+*.svg
 
 # JetBrains Rider
 *.sln.iml
