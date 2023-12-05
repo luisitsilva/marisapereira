@@ -3,7 +3,29 @@ body {
     color: rgb(0, 0, 0);
 }
 
-.title1stpage {
-    position: center;
+.title1st {
+    text-align: center;
 }
 
+.icon img {
+    width: 200px;
+    height: 200px;
+}
+
+.menufirst {
+    text-align: end;
+    list-style: none;
+}
+
+
+.menufirst ul{
+
+}
+
+.menufirst ul li{
+    color: rgb(0, 0, 0);
+}
+
+ul .hidden1 li:hover{
+    color: blueviolet;
+}
