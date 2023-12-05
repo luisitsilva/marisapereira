@@ -393,6 +393,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+*.mp4
+*.mp3
+*.mpeg
+*.jpeg
 
 # JetBrains Rider
 *.sln.iml
