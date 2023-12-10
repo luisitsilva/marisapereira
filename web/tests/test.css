@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(230, 230, 230);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+label {
+    display: block;
+}
+
+input {
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 0.5rem 0.7rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    border: 3px solid rgb(0, 55, 195);
+    border-radius: 25px;
+    padding: 0.5rem 0.7rem;
+    outline: 0;
+    transition: border-color 1s, box-shadow 1s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus
+{
+    border-color: lightblue;
+    box-shadow: 0 0 0 4px royalblue;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    width: 30%;
+    position: relative;
+    left:61%;
+}
+
+.form-group[input="user"] {
+    margin-bottom: 1rem;
+    color: royalblue;
+}
+
+.form-group button {
+    background-color: royalblue;
+    color:white;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color: rgb(255, 255, 255);
+    color:royalblue;
+    border-radius: 5px;
+    border-color: royalblue;
+}
+
