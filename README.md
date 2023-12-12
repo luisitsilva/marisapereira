@@ -1,6 +1,23 @@
 # marisapereira
 Website for Marisa Pereira.
 
+resourceID definition table
+|-----------------------------------------------------------------------------------------------------------------------------|
+| Resource         |  ID                |  AbbreviationID    |   ResultID         |  Table Name            | Database Name    |
+|------------------|--------------------|--------------------|--------------------|------------------------|------------------|
+|  segurosaudeprov |  0100              |   insprovid        |                    |  seguradoras_saude     | marisapereiraweb |
+|------------------|--------------------|--------------------|--------------------|------------------------|------------------|
+|  Medico          |  01000             |   docid            |                    |  medicos               | marisapereiraweb |
+|------------------|--------------------|--------------------|--------------------|------------------------|------------------|
+|  Paciente        |  02000             |   patid            |                    |  pacientes             | marisapereiraweb |
+|------------------|--------------------|--------------------|--------------------|------------------------|------------------|
+|  Apontamentos    |  03000             |   patapptid        |  patid+patapptid   |  apontamentos          | marisapereiraweb |
+|------------------|--------------------|--------------------|--------------------|------------------------|------------------|
+------------------------------------------------------------------------------------------------------------------------------|
+resourceID definition table
+
+
+
 #!!!!NOTE!!!!!
 # Rules that apply for all changes on any file of the web application marisapereira.ddns.net
 # After a branch is closed because of its completion, a new child version is to be set. As an example, this file is the description of the changes made in the branch

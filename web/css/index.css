@@ -27,16 +27,3 @@ body {
     justify-content: end;
     text-decoration: no underline;
 }
-
-.box {
-    color:rgb(0, 0, 0);
-    width: 7rem;
-    height: 2rem;
-    margin: 1rem;
-    background-color: rgb(255, 255, 255);
-    text-decoration: no underline;
-}
-
-.box-a:hover {
-    color: aqua;
-}
