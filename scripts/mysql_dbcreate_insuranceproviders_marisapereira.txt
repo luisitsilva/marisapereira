@@ -1,0 +1,130 @@
+#!/usr/bin
+
+# ENVS needed
+dbpwd="HilariousQu0t1d1An.1982"
+
+# This is the first script for the mysql database marisapereiraweb.
+#
+# The below script creates the DB marisapereiraweb; the admin user for this DB is mpwbadm
+#
+#
+#
+#
+
+
+mysql -u root -p$dbpwd
+
+CREATE DATABASE marisapereiraweb;
+CREATE DATABASE marisapereiradrup;
+
+CREATE USER 'mpwbadm'@'%' IDENTIFIED BY 'HilariousQu0t1d1An.1982';
+GRANT ALL PRIVILEGES ON marisapereiraweb.* TO 'mpwbadm'@'%';
+
+CREATE USER 'mpdrupadm'@'%' IDENTIFIED BY 'HilariousQu0t1d1An.1982';
+GRANT ALL PRIVILEGES ON marisapereiradrup.* TO 'mpdrupadm'@'%';
+
+FLUSH PRIVILEGES;
+exit;
+
+
+
+###Tables@marisapereiraweb###
+##
+CREATE TABLE seguradoras_saude (
+    id INT PRIMARY KEY,
+
+)
+
+id_paciente INT PRIMARY KEY AUTO_INCREMENT,
+pnome_paciente VARCHAR(250) NOT NULL,
+lnome_paciente VARCHAR(250) NOT NULL,
+data_nascimento_paciente DATE NOT NULL,
+genero ENUM('masculino', 'feminino', 'NaoBinario', 'Outro'),
+pnome_emer_paciente VARCHAR(50) NOT NULL,
+lnome_emer_paciente VARCHAR(50) NOT NULL,
+ocupacao_paciente VARCHAR(50),
+seguro_saude_paciente INT,
+contacto_tel_paciente VARCHAR(50) NOT NULL,
+contacto_tel_emer_paciente VARCHAR(50) NOT NULL,
+contacto_email_paciente VARCHAR(50),
+contacto_email_emer_paciente VARCHAR(50),
+morada_paciente_rua VARCHAR(50),
+morada_paciente_cidade VARCHAR(50),
+morada_paciente_post VARCHAR(50),
+data_entrada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data_ult_actualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (seguro_saude_paciente) REFERENCES seguradoras_saude(id_seguradora)
+
+
+
+DONE
+----------------------------paciente marcacao terapia--------------------
+id_marcacao INT PRIMARY KEY AUTO_INCREMENT,
+id_paciente INT,
+data_marcacao DATETIME,
+notas_sessao TEXT,
+id_medico INT, -- Foreign key referencing therapists table
+data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data_actualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (id_paciente) REFERENCES pacientes(id_paciente),
+FOREIGN KEY (id_medico) REFERENCES medicos(id_medico)
+------------------------------
+DONE
+
+
+DONE
+--------------------------sessoes terapia-----------------
+id_sessao INT PRIMARY KEY AUTO_INCREMENT,
+id_marcacao INT, -- Foreign key referencing appointments table
+data_sessao DATETIME,
+notas_sessao TEXT,
+avaliacao_pos_sessao INT, -- A scale from 1 to 10
+duracao_sessao INT, -- In minutes
+data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data_actualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (id_marcacao) REFERENCES paciente_marcacao_terapia(id_marcacao)
+--------------------------sessoes terapia-------------------
+DONE
+
+
+DONE
+------------------------medicos------------------------------
+Table name ->
+Fields: medicos {
+id_medico INT PRIMARY KEY AUTO_INCREMENT,
+pnome_medico VARCHAR(50) NOT NULL,
+lnome_medico VARCHAR(50) NOT NULL,
+licenca_medico VARCHAR(50) NOT NULL,
+contacto_tel_medico VARCHAR(50) NOT NULL ,
+contacto_email_medico VARCHAR(50) NOT NULL,
+morada_medico VARCHAR(50) NOT NULL,
+svc_medico VARCHAR(50) NOT NULL, -- Type of service provided by doctor
+bio_medico TEXT,
+especialidade_medico VARCHAR(50) NOT NULL,
+educacao_medico VARCHAR(50) NOT NULL,
+certificacoes_medico VARCHAR(50) NOT NULL,
+validade_licenca_medico VARCHAR(50) NOT NULL,
+experiencia_anos_medico VARCHAR(50) NOT NULL,
+associacoes_profissionais_medico VARCHAR(50) NOT NULL,
+disponibilidade_medico VARCHAR(50) NOT NULL,
+data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data_actualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+-------------------------medicos---------------------------------
+DONE
+
+
+DONE
+----------------------MEDICOS HORARIOS-------------------------
+Fields: medicos_horario {
+id_horario_medico INT PRIMARY KEY AUTO_INCREMENT,
+id_medico INT,
+dia_semana ENUM('domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'),
+hora_inicio TIME,
+hora_fim TIME,
+status_disponivel BOOLEAN,
+status_ocupado BOOLEAN,
+data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+data_actualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (id_medico) REFERENCES medicos(id_medico)
+-------------------------MEDICOS HORARIOS---------------------------
+DONE
