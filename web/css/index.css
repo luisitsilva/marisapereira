@@ -1,29 +1,76 @@
 body {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .title1st {
-    text-align: center;
+  text-align: center;
 }
 
 .icon img {
-    padding-left: 85px;
-    width: 90px;
-    height: 70px;
+  padding-left: 85px;
+  width: 90px;
+  height: 70px;
 }
 
 .icon p {
-    padding-left: 30px;
-    font-size: 20px;
-    width: 330px;
+  padding-left: 30px;
+  font-size: 20px;
+  width: 330px;
 }
 
 .container {
-    border: 1px solid rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
-    padding: 5px;
-    justify-content: end;
-    text-decoration: no underline;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  justify-content: end;
+  text-decoration: no underline;
+}
+
+.create-account-logoleft img {
+  width: 50%;
+  height: 100vh;
+  border-radius: 15px;
+}
+
+input {
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 1px solid rgb(201, 75, 43);
+  border-radius: 25px;
+  padding: 0.5rem 0.7rem;
+  outline: 0;
+  transition: border-color 1s, box-shadow 1s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: rgb(255, 135, 61);
+  box-shadow: 0 0 0 3px rgb(249, 67, 39);
+}
+
+.create-account {
+  margin-top: 1rem;
+  width: 40%;
+  position: absolute;
+  left: 55%;
+}
+
+.create-account-options-left .btn-login {
+  background-color: red;
+  margin-left: 140px;
+  margin-top: 150px;
+}
+
+.resetpwd-account-options-left .btn-resetpwd {
+  background-color: red;
+  margin-left: 140px;
+  margin-top: 250px;
 }

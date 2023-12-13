@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Psicologia - Marisa Pereira</title>
-    <link rel="stylesheet" href="../web/css/normalize.css">
-    <link rel="stylesheet" href="../web/css/index.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="../web/css/normalize.css" />
+    <link rel="stylesheet" href="../web/css/index.css" />
+  </head>
+  <body>
     <div class="title1st">
-        <p class="title1stpage">Psicologia clinica - Dra. MARISA PEREIRA&copy;</p>
+      <p class="title1stpage">Psicologia clinica - Dra. MARISA PEREIRA&copy;</p>
     </div>
-    <br>
-    <br>
+    <br />
+    <br />
     <div class="icon">
-        <img src="../web/images/terapia_marisapereira_poster03_board_65_resized.jpg" alt="Logotipo Marisa Pereira.">
-        <p>Dra. Marisa Pereira - Psicóloga clínica</p>
+      <img
+        src="../web/images/terapia_marisapereira_poster03_board_65_resized.jpg"
+        alt="Logotipo Marisa Pereira."
+      />
+      <p>Dra. Marisa Pereira - Psicóloga clínica</p>
     </div>
-    <br>
-<main>
-   <div class="container">
-    <div class="box box-a"><a href="#">Sobre</a></div>
-    <div class="box box-b"><a href="#">Agendamento terapia</a></div><br>
-    <div class="box box-c"><a href="#">Contactos</a></div>
-    <div class="box box-a"><a href="#">Artigos</a></div>
-    <div class="box box-a"><a href="#">Loja</a></div>
-    <div class="box box-a"><a href="#">Ferramentas</a></div>
-    <div class="box box-a"><a href="#">SOS</a></div>    
-   </div>
-</main>
-</body>
+    <br />
+    <main>
+      <div class="container">
+        <form>
+          <div class="form-group">
+            <label for="user"
+              >Nome de utilizador ou email utilizado no acto de registo da
+              conta.</label
+            >
+            <input id="user" type="text" placeholder="Utilizador" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password" />
+          </div>
+          <br />
+          <div class="form-group">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar dados</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
