@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create account</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../css/css/fontawesome.css" />
+    <link rel="stylesheet" href="../css/css/brands.css" />
+    <link rel="stylesheet" href="../css/css/solid.css" />
+    <link rel="stylesheet" href="../css/css/regular.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="create-account-logoleft">
+      <img
+        src="../images/animated_01.jpg"
+        alt="Imagem animada da Dra. Marisa Pereira"
+      />
+    </div>
+    <br /><br /><br /><br /><br />
+    <div class="create-account-options-left">
+      <button class="btn btn-login animate__animated animate__fadeIn">
+        LOGIN
+      </button>
+    </div>
+    <div class="resetpwd-account-options-left">
+      <button class="btn btn-resetpwd animate__animated animate__fadeIn">
+        RESET PASSWORD
+      </button>
+    </div>
+
+    <div class="create-account">
+      <form>
+        <div class="details-account">
+          <label for="user"
+            ><i class="fa-solid fa-user"></i> Defina o nome de utilizador ou
+            utilize o seu e-mail</label
+          >
+          <input id="user" type="text" placeholder="    Utilizador" required />
+        </div>
+        <div class="details-account">
+          <label for="password"
+            ><i class="fa-solid fa-key"></i> De forma a proteger o seu login,
+            escolha uma password com um minimo de 8 caractéres.</label
+          >
+          <input
+            id="password"
+            type="password"
+            placeholder="    Password"
+            minlength="8"
+            maxlength="20"
+            required
+          />
+          <label for="confpwd"
+            ><i class="fa-solid fa-key"></i> Confirme a password
+            escolhida</label
+          >
+          <input
+            id="confpwd"
+            type="password"
+            placeholder="    Confirmar Password"
+            minlength="8"
+            maxlength="20"
+            required
+          />
+        </div>
+        <div class="details-account">
+          <label for="morada"><i class="fa-solid fa-house"></i> Morada</label>
+          <input id="morada" type="text" placeholder="    Morada" required />
+        </div>
+        <br />
+        <span class="details-account" required>
+          <p>Escolha o seu género:</p>
+          <label for="masculino">Masculino</label>
+          <input type="radio" id="masculino" name="genero" value="masculino" />
+          <label for="feminino">Feminino</label>
+          <input type="radio" id="feminino" name="genero" value="feminino" />
+          <label for="nonbi">Nao binário</label>
+          <input type="radio" id="nonbi" name="genero" value="nonbi" />
+        </span>
+        <br />
+        <div class="details-account">
+          <label for="contacto"
+            ><i class="fa-solid fa-phone"></i> Contacto telefónico</label
+          >
+          <input
+            id="contacto"
+            type="text"
+            placeholder="    Contacto telefonico"
+            required
+          />
+        </div>
+        <div class="details-account">
+          <label for="emergencia">Contacto de emergência</label>
+          <input
+            id="emergencia"
+            type="text"
+            placeholder="    Contacto de emergencia"
+          />
+        </div>
+        <div class="details-account">
+          <label for="seguro">Acordo seguro de saúde</label>
+          <select name="segsaude" id="seguro">
+            <option value="">Lista seguros de saúde</option>
+            <option data-value="010001">Açoreana Seguros</option>
+            <option data-value="010002">
+              ACP - Automóvel Clube de Portugal
+            </option>
+            <option data-value="010003">ADE Seguros</option>
+            <option data-value="010004">ADM - Forças Armadas</option>
+            <option data-value="010005">ADMG - GNR</option>
+            <option data-value="010006">Advance Care Saúde</option>
+            <option data-value="010007">Ageas Portugal</option>
+            <option data-value="010008">Allianz</option>
+            <option data-value="010009">BIC Seguros - Angola</option>
+            <option data-value="0100010">BNP Paribas Cardif</option>
+            <option data-value="0100011">Cartão de Saúde</option>
+            <option data-value="0100012">CCMO Mutuelle</option>
+            <option data-value="0100013">Cetelem</option>
+            <option data-value="0100014">CIMPOR - Cimentos de Portugal</option>
+            <option data-value="0100015">ENSA - Seguros de Angola</option>
+            <option data-value="0100016">EuroVida</option>
+            <option data-value="0100017">Generali</option>
+            <option data-value="0100018">GNB - Companhia de Seguros</option>
+            <option data-value="0100019">Groupama Seguros</option>
+            <option data-value="0100020">INCM - Casa da Moeda</option>
+            <option data-value="0100021">Liberty Saúde</option>
+            <option data-value="0100022">Seguros LOGO</option>
+            <option data-value="0100023">Lusitania Seguros</option>
+            <option data-value="0100024">Medicare</option>
+            <option data-value="0100025">Médis</option>
+            <option data-value="0100026">MetLife</option>
+            <option data-value="0100027">
+              MGEN - Mutuelle Générale Éducation Nationale
+            </option>
+            <option data-value="0100028">Montepio</option>
+            <option data-value="0100029">N Seguros</option>
+            <option data-value="0100030">NOSSA Seguros</option>
+            <option data-value="0100031">Popular Seguros</option>
+            <option data-value="0100032">PT - ACS</option>
+            <option data-value="0100033">Real Vida Seguros</option>
+            <option data-value="0100034">SAD - PSP</option>
+            <option data-value="0100035">Saúde Prime</option>
+            <option data-value="0100036">
+              SBC - Sindicato Bancários Centro
+            </option>
+            <option data-value="0100037">
+              SBN - Sindicato Bancários Norte
+            </option>
+            <option data-value="0100038">
+              SBSI - Sindicate Bancários Sul e Ilhas
+            </option>
+            <option data-value="0100039">Tranquilidade</option>
+            <option data-value="0100040">
+              União das Misericórdis Portuguesas
+            </option>
+            <option data-value="0100041">Wells</option>
+          </select>
+        </div>
+        <div class="details-account">
+          <label for="datanascimento">Data de nascimento</label>
+          <input
+            type="date"
+            name="datanascimento"
+            id="datanascimento"
+            placeholder="    Data de nascimento"
+            required
+          />
+        </div>
+        <div class="details-account">
+          <label for="razaoterapia"
+            >Descreva por favor quais os motivos que levam o utilizador a
+            procurar terapia</label
+          >
+          <textarea
+            name="razaoterapia"
+            id="razaoterapia"
+            cols="30"
+            rows="10"
+            placeholder="    Ex: Ansiedade, autoconhecimento, autoestima, depressao, dependencia quimica, transtornos..."
+          ></textarea>
+        </div>
+        <div class="details-account">
+          <button type="submit">
+            <i class=""></i>
+            Registar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

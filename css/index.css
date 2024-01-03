@@ -1,0 +1,60 @@
+/*Vars*/
+:root {
+  --color-shakrared: tomato;
+}
+
+body {
+  background-color: tomato;
+  color: white;
+  padding-left: 10px;
+}
+
+label {
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input {
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: white;
+  padding: 0.5rem 0.7rem;
+  outline: 0;
+  transition: border-color 1s;
+}
+
+input:focus {
+  border-color: rgb(255, 46, 46);
+  border-width: 3px;
+}
+
+button[type="submit"] {
+  color: tomato;
+  background-color: white;
+  border-color: tomato;
+  font-weight: bold;
+}
+
+button[type="reset"] {
+  color: tomato;
+  background-color: white;
+  border-color: tomato;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  color: white;
+  background-color: tomato;
+  border-color: white;
+  font-weight: bold;
+}
+
+button[type="reset"]:hover {
+  color: white;
+  background-color: tomato;
+  border-color: white;
+  font-weight: bold;
+}
